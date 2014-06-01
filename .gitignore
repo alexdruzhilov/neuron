@@ -1,2 +1,3 @@
 ebin/
 rel/neuron
+*.sublime-*
