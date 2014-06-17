@@ -1,3 +1,4 @@
 ebin/
 rel/neuron
 *.sublime-*
+.rebar
