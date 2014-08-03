@@ -10,7 +10,7 @@
 %% ===================================================================
 
 start(_StartType, _StartArgs) ->
-    neuron_sup:start_link().
+    neuron_sup:start_link(100).
 
 stop(_State) ->
     ok.
