@@ -4,7 +4,7 @@
 -behaviour(supervisor).
 
 %% API
--export([start_link/1]).
+-export([start_link/0]).
 
 %% Supervisor callbacks
 -export([init/1]).
@@ -16,7 +16,8 @@
 %% API functions
 %% ===================================================================
 
-start_link(WorkerCount) ->
+start_link() ->
+	WorkerCount = configuration:get(neuron_count),
     supervisor:start_link({local, ?MODULE}, ?MODULE, [WorkerCount]).
 
 %% ===================================================================
