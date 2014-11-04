@@ -1,8 +1,8 @@
 .PHONY: all compile generate
 
-all: get-deps compile generate
+all: deps compile generate
 
-get-deps:
+deps:
 	rebar get-deps
 
 compile:
@@ -10,3 +10,5 @@ compile:
 
 generate:
 	rebar generate
+
+rel: deps compile generate
